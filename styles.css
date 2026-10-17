@@ -163,6 +163,18 @@ h1, h2, h3 { font-family: Manrope, sans-serif; text-wrap: balance; }
 .dahab-photo img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: 50% 52%; }
 .dahab-photo figcaption { position: absolute; z-index: 1; right: 18px; bottom: 15px; left: 18px; display: flex; justify-content: space-between; gap: 10px; color: var(--white); font-size: 7px; font-weight: 600; letter-spacing: 1.2px; }
 
+.reviews { background: var(--sand-deep); }
+.reviews-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8%; }
+.reviews-copy .eyebrow { margin-bottom: 18px; }
+.reviews-copy h2 { margin-bottom: 0; font-size: clamp(44px, 5.6vw, 66px); font-weight: 500; letter-spacing: -4px; line-height: 1.05; }
+.reviews-copy h2 em { color: var(--ocean); }
+.reviews-panel { padding: 30px; border: 1px solid #d5d3ca; background: var(--white); }
+.reviews-label { margin-bottom: 12px; color: var(--ocean); font-size: 8px; font-weight: 700; letter-spacing: 1.6px; }
+.reviews-label span { padding-inline: 3px; color: var(--coral); }
+.reviews-panel > p:not(.reviews-label) { max-width: 390px; margin-bottom: 21px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.reviews-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+.reviews-actions .text-link { font-size: 10px; }
+
 .contact { position: relative; overflow: hidden; background: linear-gradient(115deg, #0c4c50, #0b6c68); color: var(--white); text-align: center; }
 .contact-lines { position: absolute; top: 50%; left: 50%; width: 680px; aspect-ratio: 1; border: 1px solid rgb(230 245 226 / 11%); border-radius: 50%; transform: translate(-50%, -50%); }
 .contact-lines::before, .contact-lines::after { position: absolute; inset: 11%; border: 1px solid rgb(230 245 226 / 9%); border-radius: 50%; content: ""; }
@@ -271,6 +283,11 @@ h1, h2, h3 { font-family: Manrope, sans-serif; text-wrap: balance; }
   .dahab-copy > p:not(.eyebrow) { font-size: 10px; }
   .dahab-photo { min-height: 270px; }
   .dahab-photo figcaption { right: 12px; left: 12px; font-size: 6px; }
+  .reviews-inner { grid-template-columns: 1fr; gap: 24px; }
+  .reviews-copy h2 { font-size: clamp(44px, 12vw, 58px); letter-spacing: -3px; }
+  .reviews-panel { padding: 22px; }
+  .reviews-panel > p:not(.reviews-label) { font-size: 10px; }
+  .reviews-actions { gap: 13px; }
   .contact-inner { min-height: 415px; padding-block: 58px; }
   .contact-lines { width: 520px; }
   .contact h2 { font-size: 61px; letter-spacing: -4px; }
