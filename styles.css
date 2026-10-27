@@ -36,7 +36,7 @@ button { color: inherit; }
 .site-header { position: absolute; z-index: 10; inset: 0 0 auto; color: var(--white); border-bottom: 1px solid rgb(255 255 255 / 14%); }
 .header-inner { width: min(1320px, calc(100% - 64px)); height: 82px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: 10px; }
-.brand-logo { width: clamp(42px, 3vw, 56px); height: auto; display: block; flex: none; object-fit: contain; }
+.brand-logo { width: clamp(42px, 3vw, 56px); height: auto; display: block; flex: none; object-fit: contain; filter: brightness(0) invert(1); }
 .brand-name { color: var(--white); font-family: Manrope, sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 1.6px; line-height: 1.4; }
 .brand-name span { color: var(--teal); font-weight: 500; letter-spacing: 3.3px; }
 .site-nav { display: flex; align-items: center; gap: 36px; font-size: 12px; font-weight: 500; }
