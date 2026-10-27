@@ -7,16 +7,26 @@ if (year) {
 }
 
 if (menuToggle && siteNavigation) {
+  const setMenuOpen = (isOpen) => {
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    siteNavigation.classList.toggle("is-open", isOpen);
+  };
+
   menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    siteNavigation.classList.toggle("is-open", !isOpen);
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
   });
 
   siteNavigation.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      siteNavigation.classList.remove("is-open");
+    if (event.target instanceof Element && event.target.closest("a")) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false);
+      menuToggle.focus();
     }
   });
 }
