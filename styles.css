@@ -36,7 +36,7 @@ button { color: inherit; }
 .site-header { position: absolute; z-index: 10; inset: 0 0 auto; color: var(--white); border-bottom: 1px solid rgb(255 255 255 / 14%); }
 .header-inner { width: min(1320px, calc(100% - 64px)); height: 82px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: 10px; }
-.brand-logo { width: 38px; height: 38px; display: block; flex: none; }
+.brand-logo { width: clamp(42px, 3vw, 56px); height: auto; display: block; flex: none; object-fit: contain; }
 .brand-name { color: var(--white); font-family: Manrope, sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 1.6px; line-height: 1.4; }
 .brand-name span { color: var(--teal); font-weight: 500; letter-spacing: 3.3px; }
 .site-nav { display: flex; align-items: center; gap: 36px; font-size: 12px; font-weight: 500; }
@@ -116,6 +116,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; text-wrap: balance; }
 .offering-actions { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px 20px; }
 .offering-actions .text-link { font-size: 10px; }
 .offering-card-featured .text-link { color: var(--white); }
+.course-note { margin: 0 0 18px; color: var(--muted); font-size: 10px; font-weight: 600; line-height: 1.8; }
 .course-alternative { margin: 22px 0 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .course-contact { padding-block: 70px; background: var(--night); color: var(--white); }
 .course-contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
