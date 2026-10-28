@@ -6,10 +6,21 @@ A mobile-first static website for The Freedive Place in Dahab, Egypt. The site u
 
 Open `index.html` in a browser or serve the repository root with a static HTTP server.
 
+## Review preview
+
+The GitHub Pages review site is available at <https://thefreediveplace-png.github.io/thefreediveplace-website/>. The custom domain is intentionally not configured while the redesign is being reviewed. The Wix site and domain DNS are unchanged.
+
 ## Deploy with GitHub Pages
 
 The workflow in `.github/workflows/pages.yml` deploys the repository root on pushes to `main` and can also be run manually. In the repository settings, select **Pages → Build and deployment → GitHub Actions** if Pages is not already configured.
 
-The `CNAME` file selects `www.thefreediveplace.com`. Before switching the live site, configure the DNS CNAME record for `www` to point to `thefreediveplace-png.github.io`, then wait for DNS and HTTPS provisioning in the Pages settings. Keep the Wix site and its DNS unchanged until you're ready to switch. If you also want the apex domain (`thefreediveplace.com`) to resolve directly, configure its DNS records using GitHub's current Pages documentation.
+## Reconnect the custom domain after approval
 
-Course details and schedules can change, so contact Waleed for current offerings and availability. No course prices are published on this site.
+Only after approving the new site and deciding to switch from Wix:
+
+1. In the repository's **Settings → Pages**, set the custom domain to `www.thefreediveplace.com` and wait for GitHub to verify it.
+2. Add a root-level `CNAME` file containing `www.thefreediveplace.com`.
+3. At the domain's DNS provider, point the `www` CNAME record to `thefreediveplace-png.github.io`. If the apex domain (`thefreediveplace.com`) should also resolve directly, configure the A/AAAA records shown in GitHub's current Pages documentation.
+4. Wait for DNS propagation and HTTPS provisioning in Pages settings before changing or removing the existing Wix configuration.
+
+Do not change Wix settings or domain DNS while the new site is under review. Course details and schedules can change, so contact Waleed for current offerings and availability. No course prices are published on this site.
